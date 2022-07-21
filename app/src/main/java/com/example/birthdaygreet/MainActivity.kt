@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, BirthdayGreetingActivity::class.java)
             intent.putExtras(bundle)
             startActivity(intent)
+
+            val name1= nameInput.editableText.toString()
+            Toast.makeText(this, "name is $name1", Toast.LENGTH_LONG).show()
         }
     }
 
